@@ -1,0 +1,149 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+
+<RelativeLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:tools = "http://schemas.android.com/tools"
+    android:layout_width = "match_parent"
+    android:layout_height = "match_parent"
+    android:background="#AED6F1"
+    tools:context = ".homeScreen">
+
+    <LinearLayout
+        android:id="@id/Linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="99dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/logo_round" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_below="@id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center_vertical"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="MQV-Based \nProtocols Simulation"
+            android:textColor="@color/black"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="16dp"
+            android:textSize="24dp" />
+    </LinearLayout>
+
+    <EditText
+        android:id = "@+id/etIP"
+        android:layout_below="@+id/Linear1"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:hint = "IP-Address: 10.0.2.2"
+        android:backgroundTint="@color/white"
+        android:padding="10dp"
+        android:background="@drawable/textbox"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:inputType = "text"/>
+    <EditText
+        android:id = "@+id/etPort"
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:layout_below = "@+id/etIP"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:padding="10dp"
+        android:backgroundTint="@color/white"
+        android:hint = "Port No: 6666"
+        android:background="@drawable/textbox"
+        android:inputType = "number" />
+    <LinearLayout
+        android:id="@+id/Linear2"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_below="@+id/etPort">
+
+        <Button
+            android:id="@+id/MQV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#2980B9"
+            android:textSize="16dp"
+            android:text="MQV"></Button>
+
+        <Button
+            android:id="@+id/IBAKA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:textSize="16dp"
+            android:backgroundTint="#2980B9"
+            android:text="IBAKA"></Button>
+
+        <Button
+            android:id="@+id/CLAKA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#2980B9"
+            android:textSize="16dp"
+            android:layout_weight="1"
+            android:text="CLAKA"></Button>
+    </LinearLayout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Linear2"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_above="@id/btnBenchmark"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/textbox"
+        android:backgroundTint="@color/white"
+        android:padding="10dp"
+        android:fillViewport="true">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/Linear"
+            android:stretchColumns="1">
+
+            <TextView
+                android:id="@+id/tvMessages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Linear"
+                android:inputType="textMultiLine"
+                android:text="Information:"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+        </TableLayout>
+    </ScrollView>
+
+        <Button
+            android:id="@+id/btnBenchmark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#2980B9"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_weight="1"
+            android:layout_marginLeft="16dp"
+            android:text="Benchmark"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="16dp"
+            android:textSize="16dp"></Button>
+
+</RelativeLayout>
